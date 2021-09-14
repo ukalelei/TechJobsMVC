@@ -27,6 +27,7 @@ namespace TechJobsMVC.Models
             PositionType = positionType;
             CoreCompetency = coreCompetency;
         }
+        
 
         public override string ToString()
         {
@@ -52,12 +53,13 @@ namespace TechJobsMVC.Models
                 PositionType.Value = "Data not available";
             }
 
-            output = string.Format("\nID: %d\n" +
-                    "Name: %s\n" +
-                    "Employer: %s\n" +
-                    "Location: %s\n" +
-                    "Position Type: %s\n" +
-                    "Core Competency: %s\n", Id, Name, Employer, Location, PositionType, CoreCompetency);
+            output = string.Format(
+                    "ID: " + Id + "\n" +
+                    "Name: " + Name + "\n"+
+                    "Employer: " + Employer + "\n" +
+                    "Location: " + Location + "\n" +
+                    "Position: Type " + PositionType + "\n" +
+                    "Skill: " + CoreCompetency);
             return output;
         }
 

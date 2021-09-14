@@ -11,7 +11,8 @@ namespace TechJobsMVC.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        //html in /Home/Index.cshtml
+        public IActionResult Index() //display home page
         {
             Dictionary<string, string> actionChoices = new Dictionary<string, string>();
             actionChoices.Add("search", "Search");

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace TechJobsMVC.Models
 {
-    public abstract class JobField
+    public abstract class JobField //(Employer, Location, PositionType, and CoreCompetency classes all inherit from this abstract class)
     {
         public int Id { get; }
         static private int nextId = 1;

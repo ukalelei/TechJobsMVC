@@ -3,9 +3,9 @@
     <ul>
         @foreach (var action in ViewBag.actions)
         {
-            <li>
-                <a href="/@action.Key">@action.Value</a>
-            </li>
+        <li>
+            <a href="/@action.Key">@action.Value</a>  <!--action.Key is either list of search. Example = https://localhost:5001/list-->
+        </li>
 
         }
     </ul>

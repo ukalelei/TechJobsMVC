@@ -10,6 +10,7 @@ namespace TechJobsMVC.Controllers
 {
     public class SearchController : Controller
     {
+        // renders the form defined in the Views/Search/Index.cshtml template
         // GET: /<controller>/
         public IActionResult Index()
         {

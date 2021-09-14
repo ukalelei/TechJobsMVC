@@ -1,13 +1,16 @@
-﻿<div class="container body-content">
-    <h1>@ViewBag.title</h1>
+﻿<!--This page displays a table of links broken down into several categories-->
+
+
+<div class="container body-content">
+    <h1>@ViewBag.title</h1> @*Header: Data from ListController.ColumnChoices *@
     <h2 class="centered">View Jobs By Category</h2>
 </div>
 
 <table class="centeredTable">
     <tr>
-        @foreach(var column in ViewBag.columns)
+        @foreach (var column in ViewBag.columns)
         {
-            <th>@column.Value</th>
+            <th>@column.Value</th> 
         }
     </tr>
     <tr>
@@ -16,18 +19,20 @@
         }
 
         <td></td> @* Feel free to remove or modify this element if necessary. *@
-        @foreach (var category in ViewBag.tableChoices)
+        @foreach (var category in ViewBag.tableChoices) //TableChoices dictionary from ListController. Contains name of Job fields as Keys (/Models/Job.cs)
         {
             <td>
                 <ul>
-                    @foreach (var item in category.Value)
+                    @foreach (var item in category.Value) //category represents one key/value pair from TableChoices
                     {
-                        <li>
-                            <a asp-controller="List" asp-action="Jobs" asp-route-column="@category.Key" asp-route-value="@item">@item</a>
-                        </li>
+                    <li>
+                        @* asp-route-* allows Razor to dynamically generate query parameters for our URL*@
+                        @* asp-route-column or -value become the names of the query parameters the ListController.Jobs action method uses*@
+                        <a asp-controller="List" asp-action="Jobs" asp-route-column="@category.Key" asp-route-value="@item">@item</a>
+                    </li>
                     }
                 </ul>
             </td>
         }
     </tr>
-        </table>
+</table>

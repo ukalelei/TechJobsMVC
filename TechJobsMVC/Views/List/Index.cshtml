@@ -18,7 +18,14 @@
             //TODO #2: Complete the View Jobs By Category Table
         }
 
-        <td></td> @* Feel free to remove or modify this element if necessary. *@
+        <td>
+            <ul>
+                <li>
+                    <a asp-controller="List" asp-action="Jobs" asp-route-column="All">View All</a> 
+                </li>
+            </ul>
+        </td>
+        
         @foreach (var category in ViewBag.tableChoices) //TableChoices dictionary from ListController. Contains name of Job fields as Keys (/Models/Job.cs)
         {
             <td>

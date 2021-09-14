@@ -26,7 +26,7 @@ namespace TechJobsMVC.Controllers //provides functionality for users to see eith
         //provide a centralized collection of the different List and Search options presented throughout the user interface.
         internal static Dictionary<string, List<JobField>> TableChoices = new Dictionary<string, List<JobField>>()
         {
-            //implememts JobData class methods
+            //implememts JobData class method
             {"employer", JobData.GetAllEmployers()},
             {"location", JobData.GetAllLocations()},
             {"positionType", JobData.GetAllPositionTypes()},

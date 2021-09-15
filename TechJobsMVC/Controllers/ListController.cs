@@ -52,7 +52,7 @@ namespace TechJobsMVC.Controllers //provides functionality for users to see eith
         public IActionResult Jobs(string column, string value) //query parameter
         {
             //implememts JobData class methods
-            List<Job> jobs;
+            List<Job> jobs; //store results in job list 
             if (column.ToLower().Equals("all")) //fetch all job data
             {
                 jobs = JobData.FindAll();
